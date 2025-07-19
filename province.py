@@ -51,21 +51,21 @@ for _, provincia in province_gdf.iterrows():
     xmin, ymin, xmax, ymax = combined.total_bounds
 
     # === Plotta ===
-    fig, ax = plt.subplots(figsize=(20, 20))
-    gdf_webmerc.plot(ax=ax, color='red', markersize=50, edgecolor='black', zorder=3)
-    provincia_webmerc.boundary.plot(ax=ax, color='black', linewidth=2, zorder=4)
+    fig, ax = plt.subplots(figsize=(8, 8))
+    gdf_webmerc.plot(ax=ax, color='red', markersize=15, zorder=1)
+    provincia_webmerc.boundary.plot(ax=ax, color='black', linewidth=0.5, zorder=1)
 
-    ax.set_xlim(xmin - 5000, xmax + 5000)
-    ax.set_ylim(ymin - 5000, ymax + 5000)
+    ax.set_xlim(xmin - 1000, xmax + 1000)
+    ax.set_ylim(ymin - 1000, ymax + 1000)
 
-    # ctx.add_basemap(ax, source=ctx.providers.OpenStreetMap.Mapnik, crs=gdf_webmerc.crs.to_string(), zoom=11)
-    ctx.add_basemap(ax, source=ctx.providers.CartoDB.Positron, crs=gdf_webmerc.crs.to_string(), zoom=14)
+    ctx.add_basemap(ax, source=ctx.providers.OpenStreetMap.Mapnik, crs=gdf_webmerc.crs.to_string(), attribution_size=4, zoom=11)
+    # ctx.add_basemap(ax, source=ctx.providers.OpenStreetMap.HOT, crs=gdf_webmerc.crs.to_string(), zoom=11)
 
-    ax.set_title(f"Provincia di {nome_provincia.title()}")
+    # ax.set_title(f"Provincia di {nome_provincia.title()}")
     ax.set_axis_off()
 
     output_path = os.path.join(OUTPUT_FOLDER, f"{nome_provincia}.png")
-    plt.savefig(output_path, dpi=150, bbox_inches='tight')
+    plt.savefig(output_path, dpi=300, bbox_inches='tight')
     plt.close()
 
     print(f"  [+] Salvata: {output_path}")
