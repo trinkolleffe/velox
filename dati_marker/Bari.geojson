@@ -1,0 +1,70 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "SS 96_Altamura – Bari"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.576695,
+          40.847255
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "SS 100_Casamassima – Bari"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.913538,
+          40.997132
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "SS 172_Turi – Casamassima"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.964822,
+          40.938901
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "SS16_Giovinazzo - Mola di Bari"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.712286,
+          41.164182
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "SP 231_Andria – Bitonto"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.517923,
+          41.110141
+        ]
+      }
+    }
+  ]
+}

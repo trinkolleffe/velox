@@ -1,0 +1,681 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Via di Vingone_Scandicci"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.19394,
+          43.734024
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Via Dante Alighieri_Calenzano"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.180134,
+          43.846213
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Via di Prato_Calenzano"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.147025,
+          43.857655
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Via di Pratignone_Calenzano"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.160137,
+          43.846037
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Strada Statale 67 Tosco Romagnola_Montelupo Fiorentino"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.025812,
+          43.735261
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Strada Statale 34 via di Rosano_Bagno a Ripoli"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.32242,
+          43.756477
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Strada Provinciale 1 Aretina_Bagno a Ripoli"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.323773,
+          43.750062
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Strada Provinciale 1 Aretina_Bagno a Ripoli"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.316238,
+          43.753009
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Strada Provinciale 34 via di Rosano_Bagno a Ripoli"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.329608,
+          43.760355
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Strada Provinciale 41_Borgo San Lorenzo"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.39531,
+          43.94713
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Via Pietro Caiani ex Strada Provinciale 551_Borgo San Lorenzo"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.425003,
+          43.943287
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Via Pietro Caiani ex Strada Provinciale 551_Borgo San Lorenzo"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.424649,
+          43.943314
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Strada Statale 67 Tosco Romagnola_Fiesole"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.359155,
+          43.782342
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Strada Statale 65 Bolognese loc. Piani di San Bartolo_Fiesole"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.287594,
+          43.83115
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Strada Regionale 302 Faentina loc. Caldine_Fiesole"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.305319,
+          43.828228
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Viadotto dell'Indiano_Firenze"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.169614,
+          43.771622
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Viadotto dell'Indiano_Firenze"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.184297,
+          43.770443
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Viale Undici Agosto_Firenze"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.214539,
+          43.803845
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "via Marco Polo_Firenze"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.29254,
+          43.748273
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "via Marco Polo_Firenze"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.297148,
+          43.749599
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "viale Etruria_Firenze"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.225409,
+          43.774627
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "viale Etruria_Firenze"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.196913,
+          43.772442
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "viale Guidoni_Firenze"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.230377,
+          43.794649
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "viale Guidoni_Firenze"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.21307,
+          43.798312
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "via Matteotti_Firenze"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.264506,
+          43.781397
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "viale Gramsci_Firenze"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.269521,
+          43.775727
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "via Senese_Firenze"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.225925,
+          43.742887
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "via Sestese_Firenze"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.221622,
+          43.819094
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "via Sestese_Firenze"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.221429,
+          43.819162
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "viale Petrarca_Firenze"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.241439,
+          43.761314
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "viale Petrarca_Firenze"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.240827,
+          43.765772
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "viale Galilei_Firenze"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.256598,
+          43.756527
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Lungarno Aldo Moro_Firenze"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.293951,
+          43.767212
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "via Dalla Chiesa_Firenze"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.31388,
+          43.765159
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "via del Gignoro_Firenze"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.300082,
+          43.774108
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Viale Lavagnini_Firenze"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.253937,
+          43.782179
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Strada Provinciale 3 via Chiantigiana_Greve in Chianti"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.281773,
+          43.625168
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Strada Statale 67 Tosco Romagnola via Livornese_Lastra a Signa"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.100523,
+          43.770644
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Strada Statale 67 Tosco Romagnola via Livornese_Lastra a Signa"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.119248,
+          43.769691
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Strada Provinciale 556_Londa"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.575624,
+          43.862708
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Strada Regionale 69 Aretina del Valdarno_Pelago"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.466807,
+          43.760155
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Strada Regionale 70 della Consuma_Pelago"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.552457,
+          43.793085
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Strada Provinciale 87_Reggello"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.495852,
+          43.633281
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Strada Regionale 69_Reggello"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.461696,
+          43.709083
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Strada Statale 67 Tosco Romagnola_Rufina"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.483113,
+          43.816841
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Strada Statale 67 Tosco Romagnola_Rufina"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.498526,
+          43.836143
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Strada Statale 67 Tosco Romagnola_San Godenzo"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.622151,
+          43.929032
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Strada Provinciale 12 via Val di Pesa_San Casciano Val di Pesa"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.154465,
+          43.673063
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Strada Provinciale 4 via Volterrana_San Casciano Val di Pesa"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.12507,
+          43.682755
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Strada Provinciale 93 via Certaldese_San Casciano Val di Pesa"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.180982,
+          43.650617
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Strada Comunale via Scopeti 63_San Casciano Val di Pesa"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.194221,
+          43.67432
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "via Argine Strada_Signa"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.110162,
+          43.791775
+        ]
+      }
+    }
+  ]
+}
