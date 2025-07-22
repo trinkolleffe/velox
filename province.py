@@ -23,7 +23,7 @@ for _, provincia in province_gdf.iterrows():
 
     # === Verifica esistenza file marker ===
     csv_path = os.path.join(DATA_FOLDER, f"{nome_provincia}.csv")
-    json_path = os.path.join(DATA_FOLDER, f"{nome_provincia}.json")
+    json_path = os.path.join(DATA_FOLDER, f"{nome_provincia}.geojson")
 
     if os.path.exists(csv_path):
         df = pd.read_csv(csv_path)
