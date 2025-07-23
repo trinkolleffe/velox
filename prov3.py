@@ -1,3 +1,5 @@
+# === path: generate_mappe_province.py ===
+
 import os
 import contextily as ctx
 import geopandas as gpd
@@ -10,29 +12,26 @@ from matplotlib.offsetbox import OffsetImage, AnnotationBbox
 # === Costanti ===
 GEOJSON_PATH = "province.geojson"
 DATA_FOLDER = "dati_marker"
-OUTPUT_FOLDER = "output_maps"
-MARKER_IMAGE_PATH = "autovelox-icon.png"  # scaricato da: https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png
+MARKER_IMAGE_PATH = "autovelox-icon.png"  # https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png
+OUTPUT_FOLDER = "output_maps/marker"
+ZOOM_MODE = "marker"  # "marker" per ritagliare sui marker, "provincia" per mappa intera
+# OUTPUT_FOLDER = "output_maps/provincia"
+# ZOOM_MODE = "provincia"  # "marker" per ritagliare sui marker, "provincia" per mappa intera
 
 os.makedirs(OUTPUT_FOLDER, exist_ok=True)
+
 
 # === Funzione per visualizzare marker personalizzati ===
 def imscatter(x, y, ax, zoom=0.015, image_path="autovelox-icon.png"):
     if not os.path.exists(image_path):
         print(f"[!] Icona marker non trovata: {image_path}")
         return
-
     img = plt.imread(image_path)
     im = OffsetImage(img, zoom=zoom)
     for xi, yi in zip(x, y):
-        ab = AnnotationBbox(
-            im,
-            (xi, yi),
-            frameon=False,
-            xycoords='data',
-            box_alignment=(0.5, 0),  # punta sul punto
-            zorder=10
-        )
+        ab = AnnotationBbox(im, (xi, yi), frameon=False, xycoords='data', box_alignment=(0.5, 0), zorder=10)
         ax.add_artist(ab)
+
 
 # === Carica confini provinciali ===
 province_gdf = gpd.read_file(GEOJSON_PATH)
@@ -42,7 +41,6 @@ for _, provincia in province_gdf.iterrows():
     nome_provincia = provincia['prov_name'].lower()
     print(f"\nElaborazione: {nome_provincia.title()}")
 
-    # === Verifica esistenza file marker ===
     csv_path = os.path.join(DATA_FOLDER, f"{nome_provincia}.csv")
     json_path = os.path.join(DATA_FOLDER, f"{nome_provincia}.json")
     geojson_path = os.path.join(DATA_FOLDER, f"{nome_provincia}.geojson")
@@ -80,31 +78,49 @@ for _, provincia in province_gdf.iterrows():
         continue
 
     gdf = marker_gdf
-
-    # === Estrai e proietta confine provincia ===
     provincia_gdf = gpd.GeoDataFrame([provincia], crs=province_gdf.crs)
     provincia_webmerc = provincia_gdf.to_crs(epsg=3857)
     gdf_webmerc = gdf.to_crs(epsg=3857)
 
-    # === Bounding box ===
-    combined = gpd.GeoSeries(pd.concat([gdf_webmerc.geometry, provincia_webmerc.geometry], ignore_index=True))
-    xmin, ymin, xmax, ymax = combined.total_bounds
+    if ZOOM_MODE == "marker":
+        bounds = gdf_webmerc.total_bounds
+        margin_factor = 0.15  # margine aumentato se si basa solo sui marker
+    else:
+        bounds = provincia_webmerc.total_bounds
+        margin_factor = 0.05
 
-    # === Plotta ===
+    xmin, ymin, xmax, ymax = bounds
+    x_margin = (xmax - xmin) * margin_factor
+    y_margin = (ymax - ymin) * margin_factor
+
+    # Calcola livello di zoom dinamico
+    width_m = xmax - xmin
+
+    if width_m < 10_000:
+        basemap_zoom = 15
+    elif width_m < 20_000:
+        basemap_zoom = 14
+    elif width_m < 40_000:
+        basemap_zoom = 13
+    else:
+        basemap_zoom = 11
+
+    print(f"  [i] Zoom livello OSM usato: {basemap_zoom}")
+
+    # Calcola zoom marker inversamente proporzionale allo zoom della mappa
+    marker_zoom = 0.015 * (11 / basemap_zoom)
+    print(f"  [i] Zoom marker usato: {marker_zoom:.5f}")
+
     fig, ax = plt.subplots(figsize=(8.75, 8.75))
-    imscatter(
-        gdf_webmerc.geometry.x.values,
-        gdf_webmerc.geometry.y.values,
-        ax=ax,
-        zoom=0.015,
-        image_path=MARKER_IMAGE_PATH
-    )
+    imscatter(gdf_webmerc.geometry.x.values, gdf_webmerc.geometry.y.values, ax=ax, zoom=marker_zoom,
+              image_path=MARKER_IMAGE_PATH)
     provincia_webmerc.boundary.plot(ax=ax, color='black', linewidth=0.25, zorder=1)
 
-    ax.set_xlim(xmin - 1000, xmax + 1000)
-    ax.set_ylim(ymin - 1000, ymax + 1000)
+    ax.set_xlim(xmin - x_margin, xmax + x_margin)
+    ax.set_ylim(ymin - y_margin, ymax + y_margin)
 
-    ctx.add_basemap(ax, source=ctx.providers.OpenStreetMap.Mapnik, crs=gdf_webmerc.crs.to_string(), attribution_size=2, zoom=11)
+    ctx.add_basemap(ax, source=ctx.providers.OpenStreetMap.Mapnik, crs=gdf_webmerc.crs.to_string(), attribution_size=2,
+                    zoom=basemap_zoom)
     ax.set_axis_off()
 
     output_path = os.path.join(OUTPUT_FOLDER, f"{nome_provincia}.png")
